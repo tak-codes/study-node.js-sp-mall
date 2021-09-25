@@ -1,33 +1,16 @@
-const isReady = false;
-// 1. Producer
-const promise = new Promise((resolve, reject) => {
-  console.log("Promise is created!");
-  if (isReady) {
-    resolve("It's ready");
-  } else {
-    reject("Not ready");
-  }
-});
+async function f() {
 
-// 2. Consumer
-promise
-  .then(messsage => {
-    console.log(messsage);
-  })
-  .catch(error => {
-    console.error(error);
-  })
-  .finally(() => {
-    console.log("Done");
-  });
+    let promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve("완료!"), 1000)
+    });
+
+    console.log('befor await'); 
   
+    let result = await promise; // 프라미스가 이행될 때까지 기다림 (*) block!
 
-//  isReady = true
-// Promise is created!
-// It's ready
-// Done
-
-// isReady = flase
-// Promise is created!
-// Not ready
-// Done
+    console.log('after await'); 
+  
+    console.log(result); //완료
+  }
+  
+  f();

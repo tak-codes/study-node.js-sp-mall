@@ -23,3 +23,7 @@ first study node.js
 6. promise 문법 ES6에서 변경된 점
 
 7. promise 함수 사용법
+
+8. async, await  문법 설명
+
+
