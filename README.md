@@ -18,4 +18,8 @@ first study node.js
 
 4. for문 4가지 및 arrowfunction 배우기
 
-5. arrowfunction 예제 및 설명
+5. arrowfunction 설명 및 예제
+
+6. promise 문법 ES6에서 변경된 점
+
+7. promise 함수 사용법

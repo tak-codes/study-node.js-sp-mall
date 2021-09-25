@@ -1,22 +1,33 @@
-let personArray = [
-    {"name": "John Doe", "age": 20},
-    {"name": "Jane Doe", "age": 19},
-    {"name": "Fred Doe", "age": 32},
-    {"name": "Chris Doe", "age": 45},
-    {"name": "Layla Doe", "age": 37},
-];
+const isReady = false;
+// 1. Producer
+const promise = new Promise((resolve, reject) => {
+  console.log("Promise is created!");
+  if (isReady) {
+    resolve("It's ready");
+  } else {
+    reject("Not ready");
+  }
+});
 
-// personArray의 나이 평균을 구해주는 Arrow Function을 작성해봅시다.
-const getAgeAverage = (personArray) => {
-    let sum = 0;
-    for (let person of personArray) {
-        sum = sum + person["age"];
-    }
-    
-    const average = sum / personArray.length;
+// 2. Consumer
+promise
+  .then(messsage => {
+    console.log(messsage);
+  })
+  .catch(error => {
+    console.error(error);
+  })
+  .finally(() => {
+    console.log("Done");
+  });
+  
 
-    return average;
+//  isReady = true
+// Promise is created!
+// It's ready
+// Done
 
-}
-
-console.log(getAgeAverage(personArray));
+// isReady = flase
+// Promise is created!
+// Not ready
+// Done
