@@ -1,22 +1,23 @@
-const students = ["John", "Jane", "Alex"]
-
-
-//1.
-for (let i = 0; i < students.length; i++) {
-    console.log(students[i]);
+function hello() {
+	console.log("Hello function");
 }
 
-// 2.
-for (let student of students ) {
-    console.log(student)
+// 첫번째 arrow function
+const arrowFunction = () => {
+	console.log("Hello arrow function");
 }
 
-//3.
-for (let index in students) {
-    console.log(students[index])
-}
 
-//4.
-students.forEach((student) => {
-    console.log(student)
-})
+
+// 두번째 arrow function
+const arrowFunctionWithoutReturn = () => console.log("Hello arrow function without return");
+
+hello(); // Hello function
+arrowFunction(); // Hello arrow function
+arrowFunctionWithoutReturn(); // Hello arrow function without return
+
+
+
+// //차이점 확인!
+// function hello () {...}
+// hello =() => {...}
