@@ -1,16 +1,12 @@
-async function f() {
+const express = require('express')
+const app = express()
+const port = 3000
 
-    let promise = new Promise((resolve, reject) => {
-      setTimeout(() => resolve("완료!"), 1000)
-    });
+app.get('/', (req, res) => {
 
-    console.log('befor await'); 
-  
-    let result = await promise; // 프라미스가 이행될 때까지 기다림 (*) block!
+  res.send('Hello World!!!!!!!')
+})
 
-    console.log('after await'); 
-  
-    console.log(result); //완료
-  }
-  
-  f();
+app.listen(port, () => {
+  console.log(`listening at http://localhost:${port}`)
+})
