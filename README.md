@@ -14,7 +14,9 @@ first study node.js
   -[Node 공식 사이트](https://nodejs.org/ko/)
 
 3. jS 기본 문법 복습
-  -
+  -var 변수, 배열, 함수, if문, for문
+
+4. 
 
 
 
