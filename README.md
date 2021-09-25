@@ -18,4 +18,4 @@ first study node.js
 
 4. for문 4가지 및 arrowfunction 배우기
 
-5. 
+5. arrowfunction 예제 및 설명
