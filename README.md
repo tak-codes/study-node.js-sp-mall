@@ -1,6 +1,35 @@
 # study-node.js-sp-mall
 first study node.js
 
+ # 1. 리스트1node.js 쇼핑몰 만들기
+ [완성본 예시](http://3.36.86.60:3001/goods)
+
+## 1주차[노션]
+[노션]:https://www.notion.so/Node-js-1-a55fa0dd5e344cf99c70354e41783d56#22f1240eb22344dfbad31cb98e652f50
+
+1. 필수프로그램 설치 안내
+  -vs code 
+
+2. Node.js란? ES6란?
+  -[Node 공식 사이트](https://nodejs.org/ko/)
+
+3. jS 기본 문법 복습
+  -
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # 1. 제목(글머리) 작성
 # H1 제목  
 ## H2 부제목
