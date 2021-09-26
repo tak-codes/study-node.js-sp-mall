@@ -81,6 +81,12 @@ first study node.js
 
 5. schemas 만들기!
 
-6.
+6. RESTful API 만들기
+
+7. 상품 추가하기
+
+
+
+
 
 
