@@ -83,7 +83,9 @@ first study node.js
 
 6. RESTful API 만들기
 
-7. 상품 추가하기
+7. 상품 추가하기 - Insomnia 다운
+
+
 
 
 

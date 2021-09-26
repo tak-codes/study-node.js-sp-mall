@@ -20,4 +20,14 @@ router.get("/goods/:goodsId", async (req, res) => {
   res.json({ detail: goods });
 });
 
+router.post('/goods', async (req, res) => {
+  const { goodsId, name, thumbnailUrl, category, price } = req.body;
+
+  isExist = await Goods.find({ goodsId });
+  if (isExist.length == 0) {
+    await Goods.create({ goodsId, name, thumbnailUrl, category, price });
+  }
+  res.send({ result: "success" });
+});
+
 module.exports = router;
