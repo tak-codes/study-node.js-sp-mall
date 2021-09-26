@@ -48,6 +48,39 @@ app.get('/mongodb', async (req, res) => {
         ignoreUndefined: true
     });
 
+    const { Schema } = mongoose;
+    const goodsSchema = new Schema({
+      goodsID: {
+        type: Number,
+        requirde: true,
+        unique: true,
+      },
+      name: {
+        type: String,
+        requirde: true,
+        unique: true,
+      },
+      thumbnailUrl: {
+        type: String      
+      },
+      category: {
+        type: String
+      },
+      price: {
+        type: Number
+      }
+    })
+
+    let Goods = mongoose.model("Goods", goodsSchema)
+
+    await Goods.create({
+      goodsID: 1,
+      name: "맛있는 저녁",
+      thumbnailUrl: "https://src.hidoc.co.kr/image/lib/2020/11/9/1604911318873_0.jpg",
+      category: "food",
+      price: 15000
+    });
+
 		res.send('ok');
 })
 
