@@ -4,7 +4,7 @@ first study node.js
  # Node.js 쇼핑몰 만들기
  [완성본 예시](http://3.36.86.60:3001/goods)
 
-## 1주차[노션]
+## 1주차 [노션]
 [노션]:https://www.notion.so/Node-js-1-a55fa0dd5e344cf99c70354e41783d56#22f1240eb22344dfbad31cb98e652f50
 
 ### 1주차 수업목표
@@ -36,7 +36,7 @@ first study node.js
 
 
 
-## 2주차[노션]
+## 2주차 [노션]
 [노션]:https://www.notion.so/Node-js-2-d81e5fc6e4e14630a713ad134db43994
 
 ### 2주차 수업목표
@@ -62,8 +62,25 @@ first study node.js
 
 7. ejs 파일 연결 하기
 
+## 3주차 [노션]
+[노션]:https://www.notion.so/Node-js-3-cde44c3c76e249ee8096b62bd8e2201b
+
+### 2주차 수업목표
+- RESTful API가 무엇인지 알게 된다!
+- MongoDB를 설치하고 사용합니다!
+- 쇼핑몰에 RESTful API을 이용해서 상품을 추가할수 있게됩니다!
 
 
+1. REST란?
 
+2. mongoDB / robo3t 설치하기!
+
+3. mongoose npm 설치
+
+4. mongoDB 연결하는 api 설정
+
+5. schemas 만들기!
+
+6.
 
 

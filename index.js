@@ -5,9 +5,6 @@ const port = 3000
 const goodsRouter = require('./routes/goods')
 const userRouter = require('./routes/user')
 
-//아래 2줄이 body를 편하게 쓰기위한 2가지 방법!
-//express.json() , express.urlencoded 
-//마지막 줄은 static 추가! 정적 파일을 제공하기 쉽게!
 
 app.use(express.urlencoded({extended: false}))
 app.use(express.json())
@@ -17,14 +14,12 @@ app.use('/goods', goodsRouter)
 app.use('/user', userRouter)
 
 
-//아래 두단락이 미들웨어!
+
 app.use((req, res, next) => {
   console.log(req);
   next();
 });
 
-
-//아래는 ejs 를 사용하기위한 문법 
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -43,8 +38,19 @@ app.get('/detail', (req, res) => {
   res.render('detail');
 })
 
+// 몽고디비 / 몽구스 연결 api
+
+const mongoose = require('mongoose');
+
+app.get('/mongodb', async (req, res) => {
+    await mongoose.connect('mongodb://localhost/voyage', {
+        useNewUrlParser: true, 
+        ignoreUndefined: true
+    });
+
+		res.send('ok');
+})
+
 app.listen(port, () => {
     console.log(`listening at http://localhost:${port}`)
 })
-
-//detail 페이지 연결 완료
