@@ -441,3 +441,10 @@ node_modules/supports-color/index.js
 node_modules/supports-color/license
 node_modules/supports-color/readme.md
 views/test.ejs
+public/static/carts.json
+public/static/favicon.ico
+public/static/goods.json
+public/static/logo_big_tr.png
+public/static/mystyle.css
+public/static/users.json
+views/index.ejs
