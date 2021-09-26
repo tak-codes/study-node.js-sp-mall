@@ -39,8 +39,12 @@ app.get('/home', (req, res) => {
   res.render('index');
 })
 
+app.get('/detail', (req, res) => {
+  res.render('detail');
+})
+
 app.listen(port, () => {
     console.log(`listening at http://localhost:${port}`)
 })
 
-//여기까지가 홈화면 및 페이지 만들기 틀
+//detail 페이지 연결 완료

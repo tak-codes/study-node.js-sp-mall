@@ -60,6 +60,10 @@ first study node.js
 
 6. ejs 추가!
 
+7. ejs 파일 연결 하기
+
+
+
 
 
 
