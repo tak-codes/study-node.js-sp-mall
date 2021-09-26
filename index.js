@@ -23,11 +23,33 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res, next) => {
-  res.send('Welcome Home');
-});
+
+//아래는 ejs 를 사용하기위한 문법 
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+app.get('/test', (req, res) => {
+  let name = req.query.name;
+  res.render('test', {name});
+})
+
+app.get('/', (req, res) => {
+  res.send('<!DOCTYPE html>\
+  <html lang="en">\
+  <head>\
+      <meta charset="UTF-8">\
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">\
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+      <title>Document</title>\
+  </head>\
+  <body>\
+      Hi. I am with html<br>\
+      <a href="/hi">Say Hi!</a>\
+  </body>\
+  </html>')
+})
 
 app.listen(port, () => {
     console.log(`listening at http://localhost:${port}`)
 })
-
