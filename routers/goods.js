@@ -32,6 +32,17 @@ router.post('/goods', async (req, res) => {
 });
 
 
+router.delete("/goods/:goodsId/cart", async (req, res) => {
+  const { goodsId } = req.params;
+
+  const isGoodsInCart = await Cart.find({ goodsId });
+  if (isGoodsInCart.length > 0) {
+    await Cart.deleteOne({ goodsId });
+  }
+
+  res.send({ result: "success" });
+});
+
 
 router.post("/goods/:goodsId/cart", async (req, res) => {
   const { goodsId } = req.params;
