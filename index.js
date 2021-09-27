@@ -14,7 +14,6 @@ const goodsRouter = require("./routers/goods");
 app.use("/api", [goodsRouter]);
 
 
-
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 

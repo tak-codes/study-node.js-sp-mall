@@ -65,7 +65,7 @@ first study node.js
 ## 3주차 [노션]
 [노션]:https://www.notion.so/Node-js-3-cde44c3c76e249ee8096b62bd8e2201b
 
-### 2주차 수업목표
+### 3주차 수업목표
 - RESTful API가 무엇인지 알게 된다!
 - MongoDB를 설치하고 사용합니다!
 - 쇼핑몰에 RESTful API을 이용해서 상품을 추가할수 있게됩니다!
