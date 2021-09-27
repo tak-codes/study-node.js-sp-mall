@@ -2,7 +2,9 @@ const express = require("express");
 const Goods = require("../schemas/Goods");
 const Cart = require("../schemas/cart");
 
+
 const router = express.Router();
+
 
 router.get("/goods", async (req, res, next) => {
   try {
@@ -15,11 +17,15 @@ router.get("/goods", async (req, res, next) => {
   }
 });
 
+
+
 router.get("/goods/:goodsId", async (req, res) => {
   const { goodsId } = req.params;
   goods = await Goods.findOne({ goodsId: goodsId });
   res.json({ detail: goods });
 });
+
+
 
 router.post('/goods', async (req, res) => {
   const { goodsId, name, thumbnailUrl, category, price } = req.body;
@@ -46,6 +52,33 @@ router.post("/goods/:goodsId/cart", async (req, res) => {
   }
   res.send({ result: "success" });
 });
+
+
+
+router.delete("/goods/:goodsId/cart", async (req, res) =>{
+  const { goodsId } =req.params;
+
+  const isGoodsInCart = await Cart.find({ goodsId });
+  if (isGoodsInCart.length > 0) {
+    await Cart.deleteOne({ goodsId });
+  }
+
+  res.send({ result: "success"});
+});
+
+router.patch("/goods/:goodsId/cart", async (req, res) => {
+  const { goodsId } = req.params;
+  const { quantity } = req.body;
+
+  const isGoodsInCart = await Cart.find({ goodsId });
+  if (isGoodsInCart.length > 0) {
+    await Cart.updateOne({ goodsId }, { $set: { quantity } })
+  }
+
+  res.send({ result: "success" });
+  
+})
+
 
 router.get("/cart", async (req, res) => {
   const cart = await Cart.find({});
