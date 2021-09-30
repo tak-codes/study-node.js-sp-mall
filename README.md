@@ -86,12 +86,22 @@ first study node.js
 7. 상품 추가하기 - Insomnia 다운
 
 ## 4주차 [노션]
+
 [노션]:https://www.notion.so/Node-js-4-5f3dcc8644044f71b0d5015103c0d744
 
+  
+
 ### 4주차 수업목표
+
 - 필터링을 통해 데이터 조회하는 과정을 알게됩니다!
+
 - 쇼핑몰에 RESTful API을 이용해서 장바구니 물건을 삭제할 수 있게됩니다!
+
 - RESTful API의 CRUD를 다 한번씩 경험해봅니다!
+
+  
+
+1주차 종료! 2주차는 심화
 
 
 
